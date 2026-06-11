@@ -41,6 +41,7 @@ scripts/sync-plugin-skills.sh
 ## Skills
 
 - `pbp-platform-defaults`: baseline platform conventions.
+- `pbp-orchestrate`: multi-skill coordination for complex platform work.
 - `pbp-rails-change`: backend Rails change workflow.
 - `pbp-rspec-writer`: behavior-faithful RSpec workflow.
 - `pbp-bug-reproduction`: reproduce or falsify suspected bugs before editing.

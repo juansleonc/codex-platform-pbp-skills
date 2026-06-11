@@ -50,6 +50,10 @@ Initial skills:
 - `claude-skill-porting`: workflow for converting Claude/Superpower workflows into Codex skills.
 - `codex-skill-review`: review checklist for trigger quality, safety, installability, and maintainability.
 
+Orchestration skill added after the initial 12-skill roadmap:
+
+- `pbp-orchestrate`: coordinates complex PBP platform work across multiple focused skills, investigation notes, validation, documentation, commits, and follow-up planning.
+
 Batch 1 skills created after the initial scaffold:
 
 - `pbp-rails-change`: backend Rails change workflow for controllers, services, policies, queries, models, workers, Packwerk, authorization, and validation.
@@ -230,6 +234,8 @@ Before accepting a skill:
 ## Completion Status
 
 The originally planned 12 PBP platform workflow skills are implemented in `skills/` and synchronized into `plugins/pbp-platform-skills/skills/`.
+
+`pbp-orchestrate` was added as a PBP-safe version of the commonly used `orchestrate` workflow. It is intentionally named `pbp-orchestrate` to avoid colliding with a globally installed `orchestrate` skill and to keep the repo plugin behavior local-first.
 
 Remaining work is refinement rather than initial creation:
 
