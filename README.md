@@ -49,3 +49,9 @@ scripts/sync-plugin-skills.sh
 │   └── skills/
 └── skills/
 ```
+
+## Investigation Notes
+
+Ongoing planning and resume context live in:
+
+- `docs/investigation/codex-platform-skills-roadmap.md`
