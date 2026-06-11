@@ -57,6 +57,20 @@ Batch 1 skills created after the initial scaffold:
 - `pbp-bug-reproduction`: reproduce or falsify bugs, screenshots, review comments, bot findings, and suspected regressions before editing.
 - `pbp-review-finding-validator`: classify PR review/bot findings as confirmed bug, false positive, deferred debt, or needs more evidence.
 
+Batch 2 skills created after Batch 1:
+
+- `pbp-graphql-change`: GraphQL query, mutation, type, resolver, authorization, deferred query, and response contract workflow.
+- `pbp-migration-safety`: migration, MySQL DDL, index, backfill, rollback, `INSTANT`, and locking-risk workflow.
+- `pbp-e2e-evidence`: browser-driven validation, screenshots, console/network evidence, downloads, exports, and final-state workflow.
+- `pbp-payment-safety`: payment gateway, PCI, sandbox, trace, retry, idempotency, refund, and gateway consistency workflow.
+
+Batch 3 skills created after Batch 2:
+
+- `pbp-membership-change`: membership auto-renewal, cancellation, proration, retry, billing state, and lifecycle workflow.
+- `pbp-multi-tenancy-check`: facility/org tenant-scope, authorization leakage, cross-tenant query, export, worker, and API isolation workflow.
+- `pbp-performance-check`: N+1, index, slow scope, query plan, memory, caching, GraphQL/API latency, and profiling workflow.
+- `pbp-sidekiq-worker`: worker retry, idempotency, queue, serialization, async side-effect, external-call, scheduling, and job-spec workflow.
+
 Plugin:
 
 - Name: `pbp-platform-skills`
@@ -126,7 +140,7 @@ These were created first because they cover most daily `platform` tasks.
 
 ### Batch 2: Contract and Safety Work
 
-Status: next.
+Status: implemented.
 
 5. `pbp-graphql-change`
    Use for GraphQL query/mutation/schema changes, mobile compatibility, authorization, deferred query safety, and response contract checks.
@@ -141,6 +155,8 @@ Status: next.
    Use for payment gateway, PCI, sandbox, trace ID, retry, idempotency, and external gateway consistency work.
 
 ### Batch 3: Domain Depth
+
+Status: implemented.
 
 9. `pbp-membership-change`
    Use for membership auto-renewal, cancellation, proration, payment retry, and membership business rules.
@@ -211,6 +227,18 @@ Before accepting a skill:
 - Should we add `agents/openai.yaml` UI metadata for each skill now or after the first usage pass?
 - Should the plugin eventually include MCP configuration, or remain skills-only?
 
+## Completion Status
+
+The originally planned 12 PBP platform workflow skills are implemented in `skills/` and synchronized into `plugins/pbp-platform-skills/skills/`.
+
+Remaining work is refinement rather than initial creation:
+
+- Forward-test each skill on real platform tasks.
+- Port selected Claude/Superpower workflows once their local paths are known.
+- Decide whether stable repo-specific skills should also be copied into `platform/.agents/skills`.
+- Decide whether to add `agents/openai.yaml` UI metadata per skill.
+- Decide whether the plugin should remain skills-only or later bundle MCP/app configuration.
+
 ## Next Session Resume Prompt
 
 Use this prompt to resume:
@@ -218,6 +246,7 @@ Use this prompt to resume:
 ```text
 Continue the Codex skills repository work in /Users/leon/workspace/pbp/codex-platform-pbp-skills.
 Read docs/investigation/codex-platform-skills-roadmap.md first.
-Batch 1 is implemented. Create Batch 2 skills: pbp-graphql-change, pbp-migration-safety, pbp-e2e-evidence, and pbp-payment-safety.
-Keep skills/ as source of truth, run scripts/sync-plugin-skills.sh, validate the plugin with uv + PyYAML, then commit and push.
+The originally planned 12 PBP platform workflow skills are implemented.
+Next, forward-test the skills on real platform tasks and port selected Claude/Superpower workflows when their local paths are available.
+Keep skills/ as source of truth, run scripts/sync-plugin-skills.sh after edits, validate the plugin with uv + PyYAML, then commit and push.
 ```

@@ -45,6 +45,14 @@ scripts/sync-plugin-skills.sh
 - `pbp-rspec-writer`: behavior-faithful RSpec workflow.
 - `pbp-bug-reproduction`: reproduce or falsify suspected bugs before editing.
 - `pbp-review-finding-validator`: classify and handle review or bot findings.
+- `pbp-graphql-change`: GraphQL contract and compatibility workflow.
+- `pbp-migration-safety`: MySQL migration, backfill, and DDL safety workflow.
+- `pbp-e2e-evidence`: browser-driven evidence collection workflow.
+- `pbp-payment-safety`: payment gateway and PCI-sensitive workflow.
+- `pbp-membership-change`: membership lifecycle and billing workflow.
+- `pbp-multi-tenancy-check`: tenant isolation and authorization-scope workflow.
+- `pbp-performance-check`: N+1, index, profiling, and runtime performance workflow.
+- `pbp-sidekiq-worker`: Sidekiq idempotency, retry, and async safety workflow.
 - `claude-skill-porting`: port Claude/Superpower workflows into Codex skills.
 - `codex-skill-review`: review skill quality and installability.
 
