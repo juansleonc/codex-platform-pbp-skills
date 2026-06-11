@@ -1,0 +1,18 @@
+{
+  "name": "pbp-platform-skills",
+  "version": "0.1.0",
+  "description": "Reusable Codex workflows for the PBP platform Rails monolith.",
+  "author": {
+    "name": "Juan Leon"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "PBP Platform Skills",
+    "shortDescription": "Codex workflows for PBP platform work.",
+    "longDescription": "Reusable Codex skills for local-first PBP platform development, skill porting, and skill quality review.",
+    "developerName": "Juan Leon",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Use PBP Platform Skills for this platform task."
+  }
+}
