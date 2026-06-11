@@ -38,6 +38,16 @@ After editing `skills/`, sync the plugin copy:
 scripts/sync-plugin-skills.sh
 ```
 
+## Skills
+
+- `pbp-platform-defaults`: baseline platform conventions.
+- `pbp-rails-change`: backend Rails change workflow.
+- `pbp-rspec-writer`: behavior-faithful RSpec workflow.
+- `pbp-bug-reproduction`: reproduce or falsify suspected bugs before editing.
+- `pbp-review-finding-validator`: classify and handle review or bot findings.
+- `claude-skill-porting`: port Claude/Superpower workflows into Codex skills.
+- `codex-skill-review`: review skill quality and installability.
+
 ## Layout
 
 ```text

@@ -24,7 +24,7 @@ The skills should make Codex better at recurring platform tasks:
 
 The repo has been created, scaffolded, validated, committed, and pushed.
 
-Current commit:
+Current baseline commit:
 
 ```text
 91eca5c chore: scaffold Codex platform skills
@@ -49,6 +49,13 @@ Initial skills:
 - `pbp-platform-defaults`: baseline PBP platform rules for local-first Rails work.
 - `claude-skill-porting`: workflow for converting Claude/Superpower workflows into Codex skills.
 - `codex-skill-review`: review checklist for trigger quality, safety, installability, and maintainability.
+
+Batch 1 skills created after the initial scaffold:
+
+- `pbp-rails-change`: backend Rails change workflow for controllers, services, policies, queries, models, workers, Packwerk, authorization, and validation.
+- `pbp-rspec-writer`: behavior-faithful RSpec workflow with optimized fixtures and meaningful non-happy paths.
+- `pbp-bug-reproduction`: reproduce or falsify bugs, screenshots, review comments, bot findings, and suspected regressions before editing.
+- `pbp-review-finding-validator`: classify PR review/bot findings as confirmed bug, false positive, deferred debt, or needs more evidence.
 
 Plugin:
 
@@ -101,7 +108,9 @@ Create skills in batches. Each batch should be committed separately.
 
 ### Batch 1: Daily Platform Work
 
-These should be created first because they cover most daily `platform` tasks.
+Status: implemented.
+
+These were created first because they cover most daily `platform` tasks.
 
 1. `pbp-rails-change`
    Use for backend Rails changes involving controllers, services, policies, query objects, models, workers, Packwerk boundaries, or local validation.
@@ -116,6 +125,8 @@ These should be created first because they cover most daily `platform` tasks.
    Use for evaluating bot findings, PR review comments, and suspected regressions; classify as confirmed bug, false positive, deferred debt, or needs more evidence.
 
 ### Batch 2: Contract and Safety Work
+
+Status: next.
 
 5. `pbp-graphql-change`
    Use for GraphQL query/mutation/schema changes, mobile compatibility, authorization, deferred query safety, and response contract checks.
@@ -207,7 +218,6 @@ Use this prompt to resume:
 ```text
 Continue the Codex skills repository work in /Users/leon/workspace/pbp/codex-platform-pbp-skills.
 Read docs/investigation/codex-platform-skills-roadmap.md first.
-Create Batch 1 skills: pbp-rails-change, pbp-rspec-writer, pbp-bug-reproduction, and pbp-review-finding-validator.
+Batch 1 is implemented. Create Batch 2 skills: pbp-graphql-change, pbp-migration-safety, pbp-e2e-evidence, and pbp-payment-safety.
 Keep skills/ as source of truth, run scripts/sync-plugin-skills.sh, validate the plugin with uv + PyYAML, then commit and push.
 ```
-
